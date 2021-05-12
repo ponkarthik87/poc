@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>TestBenchMark.CollectionsRemoveBenchMark-20210512-145810</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet=v0.12.1, OS=Windows 10.0.18363.1500 (1909/November2018Update/19H2)
+Intel Core i7-8850H CPU 2.60GHz (Coffee Lake), 1 CPU, 12 logical and 6 physical cores
+.NET Core SDK=5.0.202
+  [Host]     : .NET Core 3.1.13 (CoreCLR 4.700.21.11102, CoreFX 4.700.21.11602), X64 RyuJIT
+  DefaultJob : .NET Core 3.1.13 (CoreCLR 4.700.21.11102, CoreFX 4.700.21.11602), X64 RyuJIT
+</code></pre>
+<pre><code></code></pre>
+
+<table>
+<thead><tr><th>       Method</th><th>    Mean</th><th> Error</th><th>StdDev</th><th>Ratio</th><th>RatioSD</th><th>Rank</th><th>Gen 0</th><th>Gen 1</th><th>Gen 2</th><th>Allocated</th>
+</tr>
+</thead><tbody><tr><td>DictRemoveInt</td><td>749.7 &mu;s</td><td>5.37 &mu;s</td><td>4.49 &mu;s</td><td>0.002</td><td>0.00</td><td>1</td><td>-</td><td>-</td><td>-</td><td>104 B</td>
+</tr><tr><td>HashSetRemoveInt</td><td>861.0 &mu;s</td><td>16.48 &mu;s</td><td>16.92 &mu;s</td><td>0.003</td><td>0.00</td><td>2</td><td>-</td><td>-</td><td>-</td><td>96 B</td>
+</tr><tr><td>HashSetRemovePerson</td><td>2,001.4 &mu;s</td><td>13.99 &mu;s</td><td>11.68 &mu;s</td><td>0.006</td><td>0.00</td><td>3</td><td>132.8125</td><td>-</td><td>-</td><td>640107 B</td>
+</tr><tr><td>DictRemovePerson</td><td>2,006.1 &mu;s</td><td>19.34 &mu;s</td><td>18.09 &mu;s</td><td>0.006</td><td>0.00</td><td>3</td><td>132.8125</td><td>-</td><td>-</td><td>640106 B</td>
+</tr><tr><td>ListRemoveInt</td><td>345,471.7 &mu;s</td><td>1,636.97 &mu;s</td><td>1,366.95 &mu;s</td><td>1.000</td><td>0.00</td><td>4</td><td>-</td><td>-</td><td>-</td><td>96 B</td>
+</tr><tr><td>ListRemovePerson</td><td>6,706,046.0 &mu;s</td><td>88,932.95 &mu;s</td><td>78,836.74 &mu;s</td><td>19.391</td><td>0.22</td><td>5</td><td>-</td><td>-</td><td>-</td><td>641344 B</td>
+</tr></tbody></table>
+</body>
+</html>
