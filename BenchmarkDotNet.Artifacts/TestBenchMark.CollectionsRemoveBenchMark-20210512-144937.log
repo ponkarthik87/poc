@@ -1,2 +1,0 @@
-// Validating benchmarks:
-Only 1 benchmark method in a group can have "Baseline = true" applied to it, group DefaultJob in class CollectionsRemoveBenchMark has 2
