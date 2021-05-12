@@ -7,9 +7,9 @@ namespace TestBenchMark
     {
         private static void Main(string[] args)
         {
-            //BenchmarkRunner.Run<CollectionsAddBenchMark>();
+            BenchmarkRunner.Run<CollectionsAddBenchMark>();
             BenchmarkRunner.Run<CollectionsContainsBenchMark>();
-            //BenchmarkRunner.Run<CollectionsRemoveBenchMark>();
+            BenchmarkRunner.Run<CollectionsRemoveBenchMark>();
 
         }
     }
